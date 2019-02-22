@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Survey Questions</h1>
+    </div>
+    <div class="container">
+      <form method="POST" action="/api/friends">
+        <h3>
+          <strong>About You</strong>
+        </h3>
+        <form class="form-group" id="formName">
+          <label for="name">Name (Required)</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </form>
+        <form class="form-group" id="photoLink">
+          <label for="photo">Link to Photo Image (Required)</label>
+          <input type="text" class="form-control" id="photo" name="photo" required>
+        </form>
+        <hr>
+        <h4>
+          <strong>Question 1</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q1">You find yourself often daydreaming</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q1">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 2</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q2">You find volleyball more enjoyable over all other sports</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q2">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 3</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q3">You prefer dogs over cats</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q3">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 4</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q4">You value science over religion</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q4">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 5</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q5">You would be inclined to help someone even if it put yourself in danger</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q5">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 6</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q6">You agree that hard shell tacos are better than soft shell tacos</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q6">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 7</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q7">Marvel Comics are infinitely better than DC Comics</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q7">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 8</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q8">You enjoy going out for happy hour over the gym</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q8">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 9</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q9">You agree that Game of Thrones is the best show out there</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q9">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <h4>
+          <br>
+          <br>
+          <strong>Question 10</strong>
+        </h4>
+        <form class="form-group">
+          <label for="q10">Halo is the best first person shooter game out there</label>
+          <br>
+          <div class="col-md-4">
+            <select class="form-control" id="q10">
+              <option value="">Answer Options</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </form>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-success btn-lg btn-block" id="submit"><i
+            class="fa fa-check-circle"></i>Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+  <footer class="footer">
+    <div class="container">
+      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/Carey-Wu/FriendFinder">GitHubRepo</a>
+      </p>
+    </div>
+  </footer>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="friendMatch" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bestMatch">Here's Your Best Match!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="newFriend"></h2>
+          <img id="newFriendImg" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // original build of html using javascript.....couldn't get it to work beyond adding to the array.  Modal wouldn't work with it.
+
+    // var surveyQuestions = [{
+
+    //   questionNumber: "Question 1",
+    //   questionAsked: "Do you find yourself often daydreaming?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q1"
+    // },
+    // {
+    //   questionNumber: "Question 2",
+    //   questionAsked: "Do you find volleyball more enjoyable over all other sports?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q2"
+
+    // },
+    // {
+    //   questionNumber: "Question 3",
+    //   questionAsked: "Do you prefer dogs over cats?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q3"
+
+    // },
+    // {
+    //   questionNumber: "Question 4",
+    //   questionAsked: "Do you value science over religion?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q4"
+
+    // },
+    // {
+    //   questionNumber: "Question 5",
+    //   questionAsked: "Would you be inclined to help someone if it put yourself in danger?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q5"
+
+    // },
+    // {
+    //   questionNumber: "Question 6",
+    //   questionAsked: "Do you agree that hard shell tacos are better than soft shell tacos?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q6"
+
+    // },
+    // {
+    //   questionNumber: "Question 7",
+    //   questionAsked: "Marvel Comics is infinitely better than DC Comics?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q7"
+
+    // },
+    // {
+    //   questionNumber: "Question 8",
+    //   questionAsked: "Do you enjoy going out for happy hour over the gym?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q8"
+
+    // },
+    // {
+    //   questionNumber: "Question 9",
+    //   questionAsked: "Do you agree that Game of Thrones is the best show out there?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"],
+    //   id: "q9"
+
+    // },
+    // {
+    //   questionNumber: "Question 10",
+    //   questionAsked: "Halo is the best first person shooter game out there?",
+    //   possibleAnswers: ["Select an Option", "1 (Strongly Disagree)", "2", "3", "4", "5 (Strongly Agree)"]
+    //   , id: "q10"
+
+    // },];
+
+
+    // function displayQuestions() {
+    //   for (var i = 0; i < surveyQuestions.length; i++) {
+    //     var title = $("<h3><strong>" + surveyQuestions[i].questionNumber + "</strong></h3>");
+    //     var form = $("<form><div class ='form-group'>");
+    //     var thisQuestion = $("<label for=" + surveyQuestions[i].id + ">" + surveyQuestions[i].questionAsked + "</label>");
+    //     var select = $("<select class = 'form-control' id =" + surveyQuestions[i].id + ">");
+
+    //     for (var x = 0; x < surveyQuestions[i].possibleAnswers.length; x++) {
+    //       var options = $("<option>");
+    //       options.text(surveyQuestions[i].possibleAnswers[x]);
+    //       options.attr({ "value": [x] });
+    //       $(select).append(options)
+    //     }
+    //     $("#questionsBox").append(title);
+    //     $("#questionsBox").append(form);
+    //     $(form).append(thisQuestion);
+    //     $(form).append(select);
+    //   }
+    // }
+
+    // displayQuestions();
+
+
+    // Capture the form inputs
+    $("#submit").on("click", function () {
+
+      if ($("#name").val() && $("#photo").val()) {
+        // Create an object for the user"s data
+        var userAnswers = {
+          "name": $('#name').val(),
+          "photo": $('#photo').val(),
+          "scores": [
+            ($('#q1').val()),
+            ($('#q2').val()),
+            ($('#q3').val()),
+            ($('#q4').val()),
+            ($('#q5').val()),
+            ($('#q6').val()),
+            ($('#q7').val()),
+            ($('#q8').val()),
+            ($('#q9').val()),
+            ($('#q10').val())
+          ]
+        };
+
+        // for (var i = 0; i <userAnswers.scores.length; i++){
+        //   parseInt(userAnswers.scores[i]);
+        //   userAnswers.name.push(userAnswersUsable);
+        //   userAnswers.photo.push(userAnswersUsable);
+        //   userAnswers.scores.push(userAnswersUsable);
+
+        // }
+        // var userAnswersUsable ={};
+
+        // console.log(userAnswers)
+        var currentURL = window.location.origin;
+
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userAnswers, function (data) {
+
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#newFriend").text(data.name);
+          $("#newFriendImg").attr("src", data.photo);
+
+          // Show the modal with the best match
+          $("#friendMatch").modal("show");
+
+        });
+      }
+      else {
+        alert("Please fill out all fields before submitting!");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
